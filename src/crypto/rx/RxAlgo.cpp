@@ -47,10 +47,12 @@ const RandomX_ConfigurationBase *xmrig::RxAlgo::base(Algorithm::Id algorithm)
     case Algorithm::RX_KEVA:
         return &RandomX_KevaConfig;
 
+    case Algorithm::RX_QMR:
+        return &RandomX_QueneroConfig;
+
     default:
         break;
     }
-
     return &RandomX_MoneroConfig;
 }
 

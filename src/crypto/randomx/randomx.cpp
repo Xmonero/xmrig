@@ -106,6 +106,17 @@ RandomX_ConfigurationKeva::RandomX_ConfigurationKeva()
 	ScratchpadL2_Size = 131072;
 	ScratchpadL3_Size = 1048576;
 }
+RandomX_ConfigurationQuenero::RandomX_ConfigurationQuenero()
+{
+	ArgonIterations = 4;
+	ArgonLanes = 2;
+	ArgonSalt = "RandomQ\x06";
+	ProgramSize = 320;
+	ProgramCount = 7;
+
+	RANDOMX_FREQ_IADD_RS = 25;
+	RANDOMX_FREQ_CBRANCH = 16;
+}
 
 RandomX_ConfigurationBase::RandomX_ConfigurationBase()
 	: ArgonIterations(3)
@@ -358,6 +369,7 @@ RandomX_ConfigurationArqma RandomX_ArqmaConfig;
 RandomX_ConfigurationGraft RandomX_GraftConfig;
 RandomX_ConfigurationSafex RandomX_SafexConfig;
 RandomX_ConfigurationKeva RandomX_KevaConfig;
+RandomX_ConfigurationQuenero RandomX_QueneroConfig;
 
 alignas(64) RandomX_ConfigurationBase RandomX_CurrentConfig;
 
